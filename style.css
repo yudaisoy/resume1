@@ -131,7 +131,7 @@ body {
         }
 
       .resumebg {
-            background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+            background: linear-gradient(270deg, rgb(253, 0, 0), rgb(238, 160, 15), rgb(247, 247, 0), rgb(0, 209, 0), rgb(0, 0, 255), rgb(139, 3, 236), rgb(235, 9, 235));
             background-size: 1400% 1400%;
             animation: rainbowAnimation 13s ease infinite;
             padding: 20px;
