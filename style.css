@@ -1,153 +1,131 @@
 body {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            padding: 20px;
-        }
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+}
 
-        .highlight {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+.highlight {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-        ul {
-            font-size: 20px;
-            line-height: 1.6;
-        }
+ul {
+    font-size: 20px;
+    line-height: 1.6;
+}
 
-        .weight{
-            font-weight: bold;
-            font-size: 24px;
-        }
+.weight {
+    font-weight: bold;
+    font-size: 24px;
+}
 
-       .textbox {
+/* ปุ่ม textbox แบบสีรุ้ง */
+.textbox {
     padding: 12px 16px;
-    border: 1px solid #d49306;
     border-radius: 8px;
     font-size: 16px;
     width: 300px;
-    transition: border-color 0.3s;
-    
-    /* สีพื้นแบบ Rainbow */
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-
-    /* ทำให้ข้อความอ่านง่าย */
     color: white;
-
-    /* ทำให้ปุ่มมีขอบโค้ง */
     border: none;
-
-    /* ถ้าต้องการให้แสงสว่างสวย ๆ เพิ่ม: */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-
-    /* ทำให้ gradient ไหลลื่นเมื่อ hover (ถ้าชอบ) */
+    transition: border-color 0.3s;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     background-size: 400% 400%;
     animation: rainbowMove 5s linear infinite;
 }
 
-/* เพิ่มเอฟเฟกต์การเคลื่อนไหวของสีรุ้ง */
 @keyframes rainbowMove {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
 
+.textbox:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
 
-        .textbox:focus {
-            border-color: #007bff;
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
-        }
+/* Slide-in effect */
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 10s ease-out forwards;
+}
 
-        /* Slide-in effect */
-         .slide-in {
-            transform: translateX(-100%);
-            animation: slideIn 10s ease-out forwards;
-        }
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
 
-            @keyframes slideIn {
-            to      {
-            transform: translateX(0);
-            }
-        }
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 5s ease-in forwards;
+}
 
-        /* Fade-in effect */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 5s ease-in forwards;
-        }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
-        @keyframes fadeIn {
-            to {
-              opacity: 1;
-         }
-        }
+/* bounce button design */
+.bounce-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
 
-        .textbox {
-            padding: 10px;
-            font-size: 16px;
-        }
+.bounce-btn:hover {
+    animation: bounce 0.6s;
+}
 
-    /* bounce button design */
-        .bounce-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-    /* Bounce effect when cursor hovers over assigned element */
-        .bounce-btn:hover {
-            animation: bounce 0.6s;
-        }
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
 
-        @keyframes bounce {
-            0%   { transform: translateY(0); }
-            50%  { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
+.textshop {
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 14px;
+    text-align: center;
+    color: white;
+}
 
-        .textshop{
-            background: linear-gradient(to right, #ffafbd, #ffc3a0);
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: bold;
-            padding: 14px;
-            text-align: center;
-            color: white;
+.text-shop-link {
+    cursor: pointer;
+}
 
+.text-shop-link:hover {
+    text-decoration: underline;
+}
 
-        }
+.resumebg {
+    background: linear-gradient(270deg, rgb(253, 0, 0), rgb(238, 160, 15), rgb(247, 247, 0), rgb(0, 209, 0), rgb(0, 0, 255), rgb(139, 3, 236), rgb(235, 9, 235));
+    background-size: 1400% 1400%;
+    animation: rainbowAnimation 13s ease infinite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
 
-        .text-shop-link{
-            cursor: pointer;
-
-
-        }
-
-        .text-shop-link:hover{
-            text-decoration: underline;
-
-        }
-
-      .resumebg {
-            background: linear-gradient(270deg, rgb(253, 0, 0), rgb(238, 160, 15), rgb(247, 247, 0), rgb(0, 209, 0), rgb(0, 0, 255), rgb(139, 3, 236), rgb(235, 9, 235));
-            background-size: 1400% 1400%;
-            animation: rainbowAnimation 13s ease infinite;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: white;
-        }
-
-        @keyframes rainbowAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
