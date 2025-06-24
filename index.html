@@ -11,11 +11,11 @@
     </audio>
     <button class="textbox" onclick="document.getElementById('backgroundMusic').play()">Play</button>
     <button class="textbox" onclick="document.getElementById('backgroundMusic').pause()">Pause</button>
-<input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.2">
+<input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
 
     <script>
     const music = document.getElementById('backgroundMusic');
-    music.volume = 0.6;
+    music.volume = 1;
 
     document.getElementById('volumeSlider').addEventListener('input', function() {
         music.volume = parseFloat(this.value);
